@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0b0b0f">
+<title>CapCut — 30 дней</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div>
+    <div class="eyebrow">CAPCUT / 30 ДНЕЙ</div>
+    <h1>Монтаж с нуля<br>до портфолио</h1>
+  </div>
+  <button id="exportBtn" class="icon-btn" title="Экспорт прогресса">⇩</button>
+</header>
+
+<main id="app">
+  <section id="todayView" class="view active">
+    <div id="todayCard"></div>
+    <div class="section-head"><h2>Прогресс</h2><span id="progressText"></span></div>
+    <div class="progress"><i id="progressBar"></i></div>
+    <div id="reminder"></div>
+  </section>
+
+  <section id="courseView" class="view">
+    <div class="section-head"><h2>Курс</h2><span>30 дней</span></div>
+    <div id="lessonList" class="lesson-list"></div>
+  </section>
+
+  <section id="portfolioView" class="view">
+    <div class="section-head"><h2>Портфолио</h2><span>чеклист</span></div>
+    <div id="portfolio"></div>
+  </section>
+
+  <section id="finalView" class="view">
+    <div class="section-head"><h2>Финал</h2><span>10 вопросов</span></div>
+    <div id="final"></div>
+  </section>
+</main>
+
+<nav class="tabs">
+  <button data-tab="today" class="active"><b>⌂</b><span>Сегодня</span></button>
+  <button data-tab="course"><b>▤</b><span>Курс</span></button>
+  <button data-tab="portfolio"><b>◈</b><span>Портфолио</span></button>
+  <button data-tab="final"><b>★</b><span>Финал</span></button>
+</nav>
+
+<dialog id="lessonDialog">
+  <div id="dialogContent"></div>
+</dialog>
+
+<input id="importInput" type="file" accept="application/json" hidden>
+<script src="lessons.ru.js"></script>
+<script src="checklist.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
